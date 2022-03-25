@@ -1,7 +1,19 @@
 def most_common_value(number_list):
     """ returns the most common element of the list
     """
-    pass
+    most_common_value = {}
+    for num in number_list:
+        if not num in most_common_value:
+            most_common_value["num"] = 1
+        else:
+            most_common_value["num"] += 1
+
+    max_value = 0
+    for key, value in most_common_value:
+        if value >= max_value:
+            max_value = value
+            return key
+
 
 
 if __name__ == "__main__":
